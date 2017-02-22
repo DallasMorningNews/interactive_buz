@@ -1,0 +1,378 @@
+//  _____           _                    _____ _         _
+// /  __ \         | |                  /  ___| |       | |
+// | /  \/_   _ ___| |_ ___  _ __ ___   \ `--.| |_ _   _| | ___  ___
+// | |   | | | / __| __/ _ \| '_ ` _ \   `--. \ __| | | | |/ _ \/ __|
+// | \__/\ |_| \__ \ || (_) | | | | | | /\__/ / |_| |_| | |  __/\__ \
+//  \____/\__,_|___/\__\___/|_| |_| |_| \____/ \__|\__, |_|\___||___/
+//                                                  __/ |
+//                                                 |___/
+
+@import 'variables';
+@import 'mixins';
+
+#content-header {
+  position: relative;
+  img {
+    width: 80%;
+    position: absolute;
+    right: 0;
+    z-index: 20;
+  }
+  h3 {
+    font-family: $custom;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    margin: 50px 0 0 5%;
+    text-transform: uppercase;
+    background-color: $black33;
+    color: white;
+    border-bottom: 1px solid $black121;
+    padding: 10px;
+    letter-spacing: .5px;
+    display: inline-block;
+  }
+  .buz-nav {
+    margin-left: 5%;
+    li {
+      display: inline-block;
+      @include type(1.6rem, 2.4rem, 0);
+      margin-top: .6rem;
+      text-transform: uppercase;
+      margin-right: 15px;
+      color: $black121;
+      a {
+        color: $black33;
+        font-family: $serif;
+        font-weight: 400;
+      }
+      &.active-chapter a {
+        border-bottom: 1px solid $dmnblue;
+        color: $dmnblue;
+      }
+    }
+  }
+  @media (max-width: 1050px) {
+    img {
+      width: 100%;
+      position: relative;
+      right: auto;
+    }
+  }
+  @media(max-width: 500px) {
+    h3 {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+    .buz-nav {
+      margin-bottom: 1.2rem;
+      li {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+#story-head {
+  position: relative;
+  z-index: 50;
+  width: 60%;
+  text-align: left;
+  padding-top: 35vw;
+  @media (max-width: 1050px) {
+    padding-top: 0;
+    min-height: 1px;
+    width: 90%;
+    margin: 0 auto 3.6rem;
+    h1 {
+      margin-top: 0;
+    }
+  }
+}
+
+.byline-block {
+  @media (max-width: 1050px) {
+    width: 90%;
+    margin: 0 0 0 5%;
+
+  }
+}
+
+.chapter {
+  color: $dmnblue;
+}
+
+.shareCommentsTop {
+  margin: 4.8rem 0 16rem 5%;
+  max-width: 500px;
+  ul {
+    margin: 0;
+    text-align: left;
+  }
+  @media (max-width: 1050px) {
+    width: 90%;
+    margin: 4.8rem auto;
+    max-width: none;
+  }
+  @media (max-width: 600px) {
+    padding: 0 0;
+  }
+}
+
+.black-block {
+  max-width: 750px;
+  padding: 4.8rem 5% 4.8rem 10%;
+  margin-bottom: 4.8rem;
+  background-image: url("../images/_texture2.jpg");
+  background-size: 50%;
+  color: white;
+  @media (max-width: 600px) {
+    padding: 3.6rem 5% 3.6rem 10%;
+    width: 95%;
+  }
+}
+
+#ch1-intro {
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-last {
+  margin: 0 0 0 0 !important;
+  max-width: calc(650px + 5%);
+  width: 50% !important;
+}
+
+.content-well p.no-pad {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+}
+
+.full-hang {
+  margin: 14.4rem 0 4.8rem 0;
+  padding: 4.8rem 0 0 5%;
+  position: relative;
+  &:before {
+    @include psuedoElement(100%, 1px, absolute);
+    background-color: $black121;
+    top: 0;
+    left: 0;
+    max-width: 750px;
+  }
+  img {
+    width: 100%;
+    // filter: grayscale(100%);
+    @include transition(all, .25s, ease-out);
+    &:hover {
+      // filter: grayscale(0);
+    }
+  }
+  .collage-left {
+    width: 55%;
+    float: left;
+  }
+  .collage-right {
+    width: 43%;
+    float: right;
+  }
+  .col-full {
+    width: 100%;
+  }
+  .col-half {
+    width: 48%;
+    float: left;
+    margin: 4% 4% 0 0;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  .cutline {
+    @include type(1.2rem, 1.5rem, 0);
+  }
+  @media (max-width: 850px) {
+    margin: -2.4rem 0 0rem -2.5%;
+    width: 105%;
+    padding: 4.8rem 0;
+    background-color: white;
+    .cutline {
+      padding: 0 0%;
+    }
+    &.collage .cutline {
+      padding: 0 5% 0 0;
+    }
+    &:before {
+      display: none;
+    }
+  }
+  @media (max-width: 600px) {
+    &.collage {
+      width: 85%;
+      margin: 14.4rem 5% 0 10%;
+    }
+    .collage-left {
+      margin-bottom: 1.2rem;
+    }
+    .collage-left, .collage-right {
+      width: 100%;
+      float: none;
+    }
+    .collage-full, .collage-half {
+      width: 100%;
+      float: none;
+      margin: 0 0 1.2rem;
+    }
+  }
+}
+
+.small-cut {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .wide-cut {
+    display: none;
+  }
+  .small-cut {
+    display: inline;
+  }
+}
+
+.left-hang {
+  width: 450px;
+  padding: 20px;
+  float: left;
+  background: $black33;
+  border-left: none;
+  margin: .7rem 2.4rem 1.2rem 0;
+  img {
+    width: 100%;
+    margin-bottom: .3rem;
+  }
+  .cutline {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: white;
+  }
+  @media(max-width: 750px) {
+    width: 95%;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.quote-hang {
+  @extend .left-hang;
+  background-image: url("../images/_texture2.jpg");
+  background-size: 50%;
+  max-width: 750px;
+  width: 95%;
+  margin: 3.6rem 0 6rem;
+  padding: 4.8rem 5% 4.8rem 10%;
+  position: relative;
+  .audio-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  i {
+    color: white;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+  }
+  blockquote {
+    color: white;
+    font-family: $custom;
+    @include type(3rem, 4.2rem, 0);
+  }
+  .attribution {
+    background-color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    @include type(2.4rem, 3rem, 0);
+    bottom: -1px;
+    right: 5%;
+    position: absolute;
+    color: $black33;
+  }
+}
+
+.audio-play {
+  display: none !important;
+}
+
+.touch {
+  .audio-play {
+    display: inline-block !important;
+  }
+  .audio-marker, .audio-restarter {
+    display: none;
+  }
+}
+
+.right-hang {
+  width: 45%;
+  float: right;
+  img {
+    width: 100%;
+  }
+}
+
+.map-hang {
+  font-family: $sans;
+  @extend .left-hang;
+  background: none;
+  padding: 0 20px;
+  @media (max-width: 750px) {
+    padding: 0 0 0 10%;
+  }
+}
+
+.no-well-rule {
+  border-left: none;
+}
+
+.subscribe-cta {
+ padding: 2.4rem 0;
+ margin: 4.8rem 0 4.8rem 10%;
+ border-top: 1px solid $black215;
+ border-bottom: 1px solid $black215;
+ max-width: calc(750px - 10%);
+ h4 {
+   font-weight: bold;
+ }
+ p {
+   font-family: $sans;
+   @include type(1.6rem, 2.4rem, 2.4rem);
+ }
+ a {
+   background-color: $dmnblue;
+   font-family: $sans;
+   color: white;
+   padding: 10px;
+   @include type(1.6rem, 2.4rem, 0);
+   @include transition(all, .25s, ease-out);
+   &:visited {
+     color: white;
+   }
+   &:hover {
+     background-color: darken($dmnblue, 5);
+     text-decoration: none;
+   }
+ }
+}
+
+.subscribed .subscribe-cta {
+  display: none;
+}
+
+.content-well .next-part {
+  font-family: $sans;
+  padding-top: 2.4rem;
+  border-top: 1px solid $black215;
+  @include type(1.8rem, 2.4rem, 0);
+  a {
+    color: $dmnblue;
+  }
+}

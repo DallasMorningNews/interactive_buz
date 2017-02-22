@@ -1,0 +1,177 @@
+.bg-black {
+  min-height: 51px;
+  padding: 6px 12px;
+  background-color: #323232;
+  color: #ffffff;
+  position: relative;
+  z-index: 30;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+.logo {
+  background-image: url("http://interactives.templates.statics.s3.amazonaws.com/v1.0/images/_dmn_logo.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: left center;
+  opacity: .85;
+  display: block;
+  height: 40px;
+  width: 155.4px;
+  float: left;
+  cursor: pointer;
+  -webkit-transtion: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out; }
+  .logo:hover {
+    opacity: 1; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+#header-nav {
+  float: left;
+  margin-left: 20px; }
+
+.header-group {
+  float: left;
+  position: relative; }
+  .header-group:last-of-type {
+    margin-right: 0; }
+  .header-group ul {
+    position: absolute;
+    top: calc(100% + 6px);
+    background-color: #323232;
+    min-width: 190px;
+    font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: none;
+    padding-top: 14px; }
+    .header-group ul.open-list {
+      display: block; }
+    .header-group ul li {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      margin-bottom: 1.2rem;
+      padding-top: 6px;
+      margin: 0 20px 1.2rem; }
+      .header-group ul li a {
+        text-decoration: none;
+        color: white; }
+        .header-group ul li a:visited {
+          color: white; }
+        .header-group ul li a:hover {
+          color: #0185d3;
+          cursor: pointer; }
+  .header-group button {
+    position: relative;
+    top: 1px;
+    margin: 0 20px 0 20px;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 39px;
+    float: left;
+    padding: 0 18px 0 0; }
+    .header-group button:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 0px;
+      height: 0px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid white;
+      right: 0;
+      top: 16px;
+      -webkit-transtion: all 0.15s ease-out;
+      -moz-transition: all 0.15s ease-out;
+      -o-transition: all 0.15s ease-out;
+      transition: all 0.15s ease-out; }
+    .header-group button:after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 0%;
+      background-color: #0185d3;
+      height: 5px;
+      -webkit-transtion: all 0.25s ease-out;
+      -moz-transition: all 0.25s ease-out;
+      -o-transition: all 0.25s ease-out;
+      transition: all 0.25s ease-out; }
+    .header-group button:hover {
+      cursor: pointer; }
+      .header-group button:hover:after {
+        width: 100%; }
+    .header-group button:focus {
+      outline: none; }
+    .header-group button.open-button {
+      color: #0185d3; }
+      .header-group button.open-button:before {
+        transform: rotate(-180deg);
+        border-top: 6px solid #0185d3; }
+      .header-group button.open-button:after {
+        width: 100%; }
+
+@media (max-width: 510px) {
+  #header-nav {
+    float: right; }
+  .header-group:first-of-type button {
+    margin-right: 10px; }
+  .header-group button {
+    margin: 0 6px; }
+  .header-group ul {
+    right: 0; }
+  #header-account button {
+    text-indent: -9999px;
+    background-image: url("http://interactives.templates.statics.s3.amazonaws.com/v1.0/images/identity.svg");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: left center;
+    width: 30px;
+    padding: 0 0;
+    margin-right: 0;
+    width: 20px; }
+    #header-account button:before, #header-account button:after {
+      display: none; } }
+
+.logged-in {
+  display: none; }
+
+.subscribed .logged-in {
+  display: block; }
+
+.subscribed .logged-out {
+  display: none; }
+
+#subscribe {
+  color: white;
+  float: right;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  line-height: 39px;
+  -webkit-transtion: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out; }
+  #subscribe:hover {
+    text-decoration: none;
+    color: #e6e6e6; }
+
+@media (max-width: 640px) {
+  #subscribe {
+    display: none; } }

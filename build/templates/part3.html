@@ -1,0 +1,314 @@
+{%extends 'base.html'%}
+{%import 'partials/img.html' as img%}
+
+
+{%block custom_meta%}
+<meta content="{{keywords|join(',')}}" name="keywords" />
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<meta content="{{shareText}}" name="description" />
+<title>{{pageTitle}}</title>
+<meta property="og:url" content="{{url}}" />
+<meta property="og:title" content="{{shareTitle}}"/>
+<meta property="og:description" content="{{shareText}}" name="description"/>
+<meta property="og:image" content="{{imgURL}}"/>
+<meta property="og:image:height" content="{{imgHeight}}"/>
+<meta property="og:image:width" content="{{imgWidth}}"/>
+<meta property="og:type" content="article" />
+<meta property="article:author" content="{{authorFBProfile}}" />
+<meta property="article:publisher" content="https://www.facebook.com/dallasmorningnews/" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{{sectionTwitter}}" />
+<meta name="twitter:creator" content="@{{authorTwitter}}" />
+
+<meta name="liveFyreID" content="{{id}}" />
+
+<meta name="parsely-page" id='parsely-page' content='{"title": "{{shareTitle}}", "link": "{{url}}", "image_url": "{{imgURL}}", "type": "post", "post_id": "{{id}}", "pub_date": "{{publishDate}}", "section": "{{section}}", "author": ["{{authors}}"], "tags": ["{{keywords|join('","')|safe}}"]}' />
+
+<meta property="og:keywords" content="{{keywords|join(',')}}"/>
+
+<meta name="news_keywords" content="{{keywords|join(',')}}"/>
+{%endblock%}
+
+
+{%block custom_head%}
+<link rel="canonical" href="{{url}}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+{%endblock%}
+
+
+{%block ad%}
+<script type="text/javascript" src="http://www.googletagservices.com/tag/js/gpt.js"></script>
+<script type="text/javascript">
+DFP_networkId = "11222444";
+var DFPSlotSizes = [];
+if (jQuery(window).width() < 768)
+{
+var DFP_sitepage = "DMN/interactives";
+DFPSlotSizes = [320,50]
+var adSlot0 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionTop");
+adSlot0.setTargeting("position", "Top");
+adSlot0.addService(googletag.pubads());
+var adSlot1 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionMiddle");
+adSlot1.setTargeting("position", "Top2");
+adSlot1.addService(googletag.pubads());
+var adSlot2 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionBottom");
+adSlot2.setTargeting("position", "Top2");
+adSlot2.addService(googletag.pubads());
+}
+else
+{
+var DFP_sitepage = "DMN/interactives";
+ DFPSlotSizes = [[728,90],[970,30],[970,90],[970,250]]
+var adSlot0 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionTop");
+adSlot0.setTargeting("position", "Top");
+adSlot0.addService(googletag.pubads());
+var adSlot1 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionMiddle");
+adSlot1.setTargeting("position", "Top2");
+adSlot1.addService(googletag.pubads());
+var adSlot2 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionBottom");
+adSlot2.setTargeting("position", "Top2");
+adSlot2.addService(googletag.pubads());
+ }
+</script>
+<script type="text/javascript">
+googletag.pubads().enableSingleRequest();
+googletag.pubads().enableSyncRendering();
+googletag.enableServices();
+</script>
+{%endblock%}
+
+
+{%block content%}
+<section id="content-header">
+  <h3>Hope for the rest of us</h3>
+  <nav class="buz-nav">
+    <ul>
+      <li><a href="index.html">Part One</a></li>
+      <li><a href="part2.html">Part Two</a></li>
+      <li class="active-chapter"><a href="part3.html">Part Three</a></li>
+    </ul>
+  </nav>
+    <img id='part3-lede' src="images/_caldwell3.gif" alt="#" />
+    <header id="story-head">
+        <h1>An unusual family</h1>
+        <h2>Deck head goes in this spot here</h2>
+    </header>
+</section>
+<!-- end contentHeader -->
+
+<div class="byline-block">
+    <p>By <a target="_blank" href="mailto:jemily@dallasnews.com">Jennifer Emily</a> | Staff Writer</p>
+    <p>Photos by <a target="_blank" href="mailto:rbaca@dallasnews.com">Rose Baca</a> | Staff Photographer</p>
+    <p>Published Mar. 1, 2017</p>
+    <!-- <p>Updated Month, Date, Year</p> -->
+</div>
+<!-- end bylineBlock -->
+
+<div class="shareComments shareCommentsTop">
+    <ul id="share-bar1"></ul>
+</div>
+<!-- end shareComments -->
+
+<section class="content-well clearfix">
+    <div class="black-block" id="ch1-intro">
+        <p class="intro"><span class="dropcap">K</span>rissi Caldwell is an inmate at the William P. Hobby Unit near Waco, where she is Prisoner No. 00644824. She works as a seamstress and has learned Spanish by talking with other inmates. Her father sends her books and keeps money in an account she can use to buy toothpaste, a fan, shoes and food she can eat in her cell.</p>
+        <p class="intro">She’s in her early 40s now, no longer the teenage girl in the defendant’s chair. She’s kept her brown hair long, even longer than it was when she posed for a family picture the Christmas before her mother’s murder.</p>
+    </div>
+    <p>In an interview at the prison, she seemed uncomfortable. She’d never spoken publicly about her crime or her family. But over time, she opened up, smiling and sometimes growing teary as she talked about Buz and their relationship.</p>
+    <p>Krissi waved off questions about the night of the shooting and parts of what led up to it. The only question that interests her now is an essential one. Sometimes, when Buz visits, she will cry and ask him, “Why did we do this?”</p>
+    <p>“I wish it could be as easy as saying that I think it was a mental health issue,” she said. “I don’t think Bobby and I had that excuse.”</p>
+    <p>The truth, she said, is that she was angry because her parents wouldn’t let her date Bobby. She said the plot started as a joke that got out of control. </p>
+    <p>During all the fights and yelling and anger, before shots were fired, Krissi forgot a simple truth: Her parents loved her. </p>
+
+    <div class="left-hang">
+      <img src="images/_krissi_buz.jpg" alt="Krissi and Buz Caldwell eembrace during one of Buz’s prison visits." />
+      <p class="cutline">Krissi and her father embrace during one of Buz’s prison visits. Buz wonders if the courts and juries would have looked at Krissi and Bobby differently if they’d known as much about teenagers and brain development back when their fate was being decided. </p>
+    </div>
+
+    <p>Krissi remembered sitting on Buz’s lap when she was a little girl and twisting his wedding ring on his finger.</p>
+    <p>“Find the beginning of the ring,” he told her.</p>
+    <p>She searched and wanted to please her father, but she couldn’t find it.</p>
+    <p>“Find the end of the ring,” he said.</p>
+    <p>Again, she examined it without success.</p>
+    <p>“Me and your mom’s love for you and your sister is just like this ring,” Krissi recalled her father saying. “It doesn’t have a beginning and an end.”</p>
+    <p>Telling the story years later, she seemed wistful, saying she’s sorry she didn’t understand years ago.</p>
+    <p>“I was like, ‘Oh, OK. I know, Daddy.’ ”</p>
+    <p>Sometimes, she asks her father about her mother’s life. “Dad, I’m 37, what were you and mom doing when you were 37? Dad, I’m 40 ...” </p>
+    <p>With age has come the realization that Roz died very young. Krissi turned 41 in October. Next fall, she’ll have lived longer than her mother, who died weeks before her 42nd birthday.</p>
+    <p>“My sister is now older than she was when she died,” Krissi said. “It’s not fair that she didn’t get to live out her life.”</p>
+    <p>Brandi remained bitter toward Krissi much longer than Buz did. But eventually, she started going to church again, and the right amount of time passed. Also, she learned that kids’ brains don’t fully develop until their 20s. Until then, young people, especially teens, overreact and don’t make reasonable decisions. </p>
+    <p>Brandi has seen her sister change. She notices that she can do something nice for Krissi without her sister asking for more. She encourages her two children, now adults, to get to know Krissi. That’s new. </p>
+    <p>Not long ago, Buz and Brandi visited Krissi together. Buz watched as his daughters acted more like two sisters in elementary school than two middle-aged women.</p>
+    <p>“They sat down there and held hands like two kids,” Buz said. “The guards would come by and they had them where the guards couldn’t see.”</p>
+    <p>Krissi believes Buz’s love for her -- and his Christian values -- allowed him to see her as more than a murderer.</p>
+    <p>“He knew me whole as a person,” Krissi said. “ ‘This is still my daughter, and I remember and I know her. She’s really not a monster.’ I think that kind of helped him forgive.” </p>
+    <p>She hasn’t given herself the same grace. When she thinks back to quiet moments with her mom, sipping Diet Pepsi on the porch, her betrayal of her family hits her like a gut punch.</p>
+    <p>“How do you know when you’ve forgiven yourself?” she asked, choking back a sob. “If the answer is when it stops hurting, then the answer is never.”</p>
+
+    {%include "adblock1.html" %}
+
+    <p class="subhead">Visiting Bobby</p>
+
+    <p>From the beginning, Buz wanted to hate the kid who shot him and killed his wife.</p>
+  <p>During the trials, he had looked for confirmation that Bobby Gonzales was evil. Surely Bobby hurt animals and beat up his little brothers.</p>
+  <p>But Buz asked around, and that’s not what people said. They said Bobby had always been a good kid who was close to his parents and four brothers. </p>
+  <p>Quiet. Friendly. An athlete.</p>
+
+  <div class="left-hang">
+    <img src="images/_bobby_football.jpg" alt="Bobby Gonzalez with the junior varsity football team in a 1992 Frisco High School yearbook photo." />
+    <p class="cutline">Bobby (24) played on Frisco High’s junior varsity football team in the months before the shootings.</p>
+  </div>
+
+  <p>“Had you known Bobby,” a school administrator told Buz, “you would have liked Bobby. Everybody in this school respected him.”</p>
+  <p>A couple of years after the shootings, Bobby showed that character by writing to Buz to apologize. </p>
+  <p>“I’ve prayed a lot about what happened, and have asked GOD for forgiveness many times, but I’ve realized that part of the forgiveness I need has to come from you,” Bobby wrote. </p>
+  <p>Buz hadn’t wanted to hear it then. But in time, he came to see his forgiveness of Bobby as a “package deal” with Krissi. Not because of who they were, but because of who Buz had become.</p>
+  <p>“It was easier for me to forgive Bobby,” Buz said. “Bobby was an unknown to me. I felt like Bobby was led into this crime. Had it not been for Krissi, he never would have been involved.”</p>
+  <p>Finally, years after the shootings, he drove to the Jim Ferguson Unit in Midway, just north of Huntsville. While the guards sent for Bobby, Buz waited in an uncomfortable chair pulled up to a window. Soon, a young kid walked toward him and took a seat on the other side of the glass. Certainly, the prison had sent the wrong person. </p>
+  <p>“He looked so young, so baby-faced,” Buz said.</p>
+  <p>Bobby was in his mid-20s. </p>
+  <p>This was the first time they had ever formally met. They began by talking about this and that. The outside world. How good it was for Buz to visit. After 10 or 15 minutes, Buz saw the person others had told him about. </p>
+
+  <div class="subscribe-cta">
+    <h4>Looking for the next great story to read?</h4>
+    <p>If you like narrative storytelling such as this, please consider supporting dallasnews.com by subscribing today.</p>
+    <a href="https://join.dallasnews.com/subscribe">Subscribe now</a>
+  </div>
+
+  <p>“I saw a kid sitting there in an adult prison surrounded by guys who were 10, 15, 20 years older than he was,” Buz said. “All of a sudden, you realized what a tough world he had.”</p>
+  <p>Buz said what he had come to say: He had long since forgiven Bobby. Yes, he still felt angry sometimes. But he held no animosity.</p>
+  <p>Tears spilled onto Bobby’s cheeks.</p>
+  <p>“Well, I’ve not learned to forgive myself,” Bobby said. Buz told him it was time he did. </p>
+  <p>Then, Buz remembers, Bobby said something that shocked him: Bobby had always assumed Buz would use his military connections and high-level security clearances to have him killed.</p>
+  <p>Buz found himself apologizing to the guy who shot him.</p>
+  <p>“I’ll ask your forgiveness,” he recalled telling him. “I should have been down here a long time ago or had your family tell you I wasn’t out to get you.”</p>
+
+  <div class="full-hang">
+    {{img.jpg('bobby_portrait', 'Bobby Gonzalez poses for a photograph at the Alfred D. Hughes Unit in Gatesville, Texas.')}}
+    <p class="cutline">Today, Bobby is an inmate at the Alfred D. Hughes Unit in Gatesville. He marvels when he reflects on Buz visiting him in prison for the first time: “Here’s this guy that I took so much from. All this regret and all this sorrow. It just hit me.”</p>
+  </div>
+
+  <p class="subhead no-pad">‘I just felt so bad’</p>
+
+  <p>Bobby remembers tearing up when Buz came to see him.</p>
+  <p>“Here’s this guy that I took so much from. All this regret and all this sorrow. It just hit me,” Bobby said, sitting at a picnic-style table in the Alfred D. Hughes Unit where he has been since 2013. “What did I do to this man’s life, and he’s right here in front of me now. I couldn’t even describe how I felt. I just felt so bad.”</p>
+  <p>Buz doesn’t visit often, but he and Bobby talk on the phone every few weeks.</p>
+  <p>“We’ve got where we chitchat like a couple of teenage, high school girls. I mean, it’s pretty nauseating,” Buz said with a laugh. “Things on the outside, things he’d like to do, what he does on the inside. From a reality standpoint, what it was like to grow up inside prison.”</p>
+
+  <div class="map-hang">
+    <img src="images/_caldwell_maps_prisons.svg" alt="Map of the Alfred D. Hughes Unit, where Bobby Gonzalez is serving a life sentence, and the William P. Hobby Unit, where Kirssi Caldwell is serving a life sentence. The Hughes Unit is just north of Gatesville, Texas, while the Hobby Unit is just south of Marlin, Texas."/>
+  </div>
+
+  <p>Buz shares tidbits about Krissi’s life with Bobby and tells his daughter about him. The two briefly married early in their prison terms but divorced a short time later. They said they realized their marriage wasn’t good for either of them. Today, prison rules forbid them from communicating because they were convicted of the same crime. </p>
+  <p>Buz has also gotten to know Bobby’s family, especially Bobby’s mother, Eloisa Salomon. A while back, Buz, his mother and Brandi spent an afternoon at her house with Bobby’s brothers watching Dallas Cowboys football and eating brisket. For Bobby, this is another way Buz shows he has forgiven.</p>
+  <p>“If I were in his shoes, I don’t think I’d be so easy to forgive a person,” Bobby said.</p>
+  <p>Twenty-five years after the shootings, Buz finds it easier to live with what Krissi and Bobby did than what he himself did: He supported the decision to try the two teenagers as adults. He hates that he did this, hates that he so badly wanted life sentences.</p>
+  <p>Now, he believes Krissi and Bobby couldn’t truly understand the consequences of their decisions.</p>
+  <p>“I know the crime is horrible. I know the loss of life is horrible,” said Buz. “But I still go back to looking at that young person and being able to understand that, physically, they may look like an adult. But they’re still just a kid.”</p>
+
+  <div class="quote-hang">
+    <div class="audio-controls">
+      <i class="audio-marker fa fa-volume-up"></i>
+      <i class="audio-restarter fa fa-repeat"></i>
+      <i class="audio-play fa fa-play"></i>
+    </div>
+
+    <audio>
+      <source src="assets/buz6.mp3" type="audio/mpeg" />
+      <source src="assets/buz6.ogg" type="audio/ogg" />
+      Your browser does not support the audio element.
+    </audio>
+    <blockquote>“It would be absolutely joyful. I can't begin to tell you how happy it would make me to go do that. It’s kind of like a dream come true. I’ve been thinking about this for years and years.”</blockquote>
+    <p class="attribution">— Buz Caldwell</p>
+  </div>
+
+  <p>Buz wonders if the courts and juries would have looked at Krissi and Bobby differently if they’d known about teenagers and brain development back then. That science is one of the reasons the U.S. Supreme Court banned the death penalty for those who commit capital murder before age 18.</p>
+  <p>The justice system is beginning to think differently about cases involving kids. In 2015, a 14-year-old girl in Dallas plotted and carried out the drowning of an infant. A judge gave the girl a 40-year sentence that will begin in a juvenile facility instead of a state prison. She’ll undergo therapy and go to school. It’s possible she could go free and never spend a day in adult prison. A judge will decide before she turns 19.</p>
+  <p>For now, the soonest Krissi and Bobby can hope to get out of prison is 2027, when they’re eligible for parole. But Buz hopes the criminal justice system will make an exception for them because they were locked up so young. He talks about meeting with state legislators interested in changing the laws for child criminals.</p>
+  <p>Buz wants the state to conduct early evaluations of these inmates. The ones who have changed should be released early, he believes, and those who haven’t should stay.  These thoughts consume him in retirement, as he mows the grass and walks his dog, Rose.</p>
+  <p>Krissi worries about how her father will cope with disappointment if he’s unsuccessful. “He is twice the victim,” she said. “One, for having been the victim of this crime and, two, for having to be the father. It never quite ends for him.”</p>
+
+  {%include "adblock2.html" %}
+
+  <p class="subhead">A distant vision</p>
+  <p>Buz wants to be there when Krissi and Bobby get out. In his mind, he knows just how it would go. In this idyllic reunion, he’d drive his truck down Interstate 35 to Waco and head west to Gatesville, where he would pick up Bobby. Together, they’d drive east for an hour to get Krissi.</p>
+  <p>“It would be absolutely joyful. You have no idea how happy it would make me to go do that,” Buz said. “It’s kind of like a dream come true. I’ve been thinking about this for years and years.” </p>
+  <p>He’d buy them lunch -- their choice after years of prison food -- and then they’d all head home to Frisco. He’d invite Bobby to move in with them, too. Buz imagines everyone living together peacefully under one roof, the past in the past. An unusual but loving family. </p>
+  <p>This new life wouldn’t happen in the house where Roz died. That place is gone. Years ago, Buz watched as a bulldozer plowed into the porch and mashed the house into rubble. In the end, the splintered wood and concrete were swept into a deep pit and covered with dirt.</p>
+  <p>Buz still drives by sometimes and sees the field where the house used to be. He glances that way and moves on.</p>
+
+
+  <p class="twitter-tag">Follow Jennifer Emily on Twitter at <a href="http://www.twitter.com/byjenemily">@byjenemily.</a></p>
+
+
+  {%include "adblock3.html" %}
+
+    <section class="credits clearfix">
+        <p>Author: <a href="mailto:emailaddress">Name</a></p>
+        <p>Editor: <a href="mailto:emailaddress">Name</a></p>
+        <p>Copy Editor: <a href="mailto:emailaddress">Name</a></p>
+        <p>Photos: <a href="mailto:emailaddress">Name</a></p>
+        <p>Graphics: <a href="mailto:emailaddress">Name</a></p>
+        <p>Designer: <a href="mailto:emailaddress">Name</a></p>
+    </section>
+	<!-- end credits -->
+
+	<section class="more clearfix">
+		<h5>Read more from The Dallas Morning News</h5>
+		<a class="clearfix" href="#">
+			<img src="images/_defaultImage.jpg" alt="#" />
+			<h6>Story title goes here</h6>
+			<p>Description of the story goes in this spot here</p>
+		</a>
+		<a class="clearfix" href="#">
+			<img src="images/_defaultImage.jpg" alt="#" />
+			<h6>Story title goes here</h6>
+			<p>Description of the story goes in this spot here</p>
+		</a>
+		<a class="clearfix" href="#">
+			<img src="images/_defaultImage.jpg" alt="#" />
+			<h6>Story title goes here</h6>
+			<p>Description of the story goes in this spot here</p>
+		</a>
+	</section>
+	<!-- end more -->
+
+
+    <div class="shareComments">
+        <div id="comments"></div>
+	</div>
+	<!-- end shareComments -->
+
+
+</section>
+<!-- end contentWell -->
+{%endblock%}
+
+
+
+
+{%block custom_foot%}
+	<script type="text/javascript"></script>
+{%endblock%}
+
+
+
+
+
+{%block custom_social_meta%}
+<script type="text/javascript">
+  var storyTitle = "{{tweetText}}", // headline in tweet card
+	storyURL = "{{url}}",
+	leadText = "{{shareText}}", //description in tweet card
+	storyIMG = "{{imgURL}}",
+	storyAuthor = "{{authors}}",
+	twitterTag = "{{sectionTwitter}}",
+	comments = true,
+	share = true;
+	OAS_sitepage = 'www.dallasnews.com/{{desk}}/{{section}}/';
+</script>
+{%endblock%}
