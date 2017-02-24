@@ -316,3 +316,11 @@
   margin: 3.6rem 0 4.8rem 10%;
   max-width: 650px;
   padding: 0; }
+
+@media (max-width: 860px) {
+  margin: 3.6rem 0 4.8rem 10%;
+  max-width: calc(750px - 10%);
+  padding: 0; }
+
+@media (max-width: 850px) {
+  width: 85%; }
