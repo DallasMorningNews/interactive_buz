@@ -87,6 +87,9 @@
       margin-top: 0;
     }
   }
+  .short-wrap {
+    max-width: 500px;
+  }
 }
 
 .byline-block {
@@ -378,7 +381,7 @@
 }
 
 .shareComments {
-  margin: 3.6rem 0 4.8rem 10%;
+  margin: 3.6rem 0 4.8rem 5% !important;
   max-width: 650px;
   padding: 0;
 }
@@ -391,4 +394,138 @@
 
 @media (max-width: 850px) {
   width: 85%;
+}
+
+@media print {
+  * {
+    overflow: visible !important;
+    float: none !important;
+    -webkit-print-color-adjust: exact;
+  }
+  // section, div, article, aside {
+  //   display: inline;
+  // }
+  body {
+    padding-bottom: 0;
+  }
+  .ad, .video-block, .quote-hang, footer, .more, .subscribe-cta, .next-part, .shareComments, #header-nav, #subscribe {
+    display: none !important;
+  }
+  .content-well {
+    border-left: none;
+    padding: none;
+    display: inline;
+    p {
+      margin-left: 0;
+      max-width: none;
+      width: 100%;
+      @include type(1.2rem, 1.5rem, 1.5rem);
+    }
+  }
+  p.subhead {
+    margin: 2.4rem 0;
+    max-width: none;
+    width: 100%;
+    padding: 0 0;
+    border-top: none;
+    @include type(2.4rem, 3rem, 2.4rem);
+  }
+  .black-block {
+    background-image: none;
+    color: $black50;
+    margin: 0 0 2.4rem;
+    padding: 0 0;
+    max-width: none;
+    width: 100%;
+  }
+  .dropcap {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0 0;
+    padding: 0 0;
+    width: auto;
+    height: auto;
+    color: $black50;
+    float: none;
+    border: none;
+    text-align: left;
+  }
+  .full-hang {
+    margin: 2.4rem 0;
+    background-color: initial;
+    padding: 0 0;
+    &:before {
+      display: none;
+    }
+  }
+  .collage {
+    margin: 0 2.4rem 0 0;
+    padding: 0 0;
+    .collage-left, .collage-right {
+      padding: 0 0;
+      float: none;
+      width: 50%;
+      margin: 0 0;
+    }
+    img, .col-half {
+      width: 100%;
+      margin: 0 1rem 1rem 0;
+    }
+  }
+  .left-hang {
+    background-color: initial;
+    padding: 0 0;
+    margin: 0rem 2.4rem 2.4rem 0;
+    width: 35%;
+    // float: left !important;
+    .cutline {
+      color: $black50;
+    }
+  }
+  .bg-black {
+    background-color: black;
+  }
+  #content-header {
+
+    h3 {
+      background-color: initial;
+      color: $black50;
+      padding: 0 0 .6rem;
+      margin-left: 0;
+    }
+    img {
+      position: relative;
+      right: auto;
+    }
+    .buz-nav {
+      margin-left: 0;
+      li {
+        display: none;
+        &.active-chapter {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  #story-head {
+    min-height: auto;
+    padding: 0 0;
+    margin: 0 0 2.4rem 0;
+    h1, h2, .short-wrap {
+      max-width: none;
+      width: 100%;
+      margin: 0 0 2.4rem;
+    }
+  }
+  .byline-block {
+    margin: 0 0;
+  }
+  .credits {
+    margin: 2.4rem 0 0 0;
+    width: 100%;
+    max-width: none;
+    p {
+      display: inline;
+    }
+  }
 }

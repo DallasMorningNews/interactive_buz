@@ -925,6 +925,8 @@ XIX. ADS
       margin: 0 auto 3.6rem; }
       #story-head h1 {
         margin-top: 0; } }
+  #story-head .short-wrap {
+    max-width: 500px; }
 
 @media (max-width: 1050px) {
   .byline-block {
@@ -1175,7 +1177,7 @@ XIX. ADS
     color: #0185d3; }
 
 .shareComments {
-  margin: 3.6rem 0 4.8rem 10%;
+  margin: 3.6rem 0 4.8rem 5% !important;
   max-width: 650px;
   padding: 0; }
 
@@ -1186,6 +1188,110 @@ XIX. ADS
 
 @media (max-width: 850px) {
   width: 85%; }
+
+@media print {
+  * {
+    overflow: visible !important;
+    float: none !important;
+    -webkit-print-color-adjust: exact; }
+  body {
+    padding-bottom: 0; }
+  .ad, .video-block, .quote-hang, footer, .more, .subscribe-cta, .next-part, .shareComments, #header-nav, #subscribe {
+    display: none !important; }
+  .content-well {
+    border-left: none;
+    padding: none;
+    display: inline; }
+    .content-well p {
+      margin-left: 0;
+      max-width: none;
+      width: 100%;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      margin-bottom: 1.5rem; }
+  p.subhead {
+    margin: 2.4rem 0;
+    max-width: none;
+    width: 100%;
+    padding: 0 0;
+    border-top: none;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    margin-bottom: 2.4rem; }
+  .black-block {
+    background-image: none;
+    color: #323232;
+    margin: 0 0 2.4rem;
+    padding: 0 0;
+    max-width: none;
+    width: 100%; }
+  .dropcap {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0 0;
+    padding: 0 0;
+    width: auto;
+    height: auto;
+    color: #323232;
+    float: none;
+    border: none;
+    text-align: left; }
+  .full-hang {
+    margin: 2.4rem 0;
+    background-color: initial;
+    padding: 0 0; }
+    .full-hang:before {
+      display: none; }
+  .collage {
+    margin: 0 2.4rem 0 0;
+    padding: 0 0; }
+    .collage .collage-left, .collage .collage-right {
+      padding: 0 0;
+      float: none;
+      width: 50%;
+      margin: 0 0; }
+    .collage img, .collage .col-half {
+      width: 100%;
+      margin: 0 1rem 1rem 0; }
+  .left-hang, .quote-hang, .map-hang {
+    background-color: initial;
+    padding: 0 0;
+    margin: 0rem 2.4rem 2.4rem 0;
+    width: 35%; }
+    .left-hang .cutline, .quote-hang .cutline, .map-hang .cutline {
+      color: #323232; }
+  .bg-black {
+    background-color: black; }
+  #content-header h3 {
+    background-color: initial;
+    color: #323232;
+    padding: 0 0 .6rem;
+    margin-left: 0; }
+  #content-header img {
+    position: relative;
+    right: auto; }
+  #content-header .buz-nav {
+    margin-left: 0; }
+    #content-header .buz-nav li {
+      display: none; }
+      #content-header .buz-nav li.active-chapter {
+        display: inline-block; }
+  #story-head {
+    min-height: auto;
+    padding: 0 0;
+    margin: 0 0 2.4rem 0; }
+    #story-head h1, #story-head h2, #story-head .short-wrap {
+      max-width: none;
+      width: 100%;
+      margin: 0 0 2.4rem; }
+  .byline-block {
+    margin: 0 0; }
+  .credits {
+    margin: 2.4rem 0 0 0;
+    width: 100%;
+    max-width: none; }
+    .credits p {
+      display: inline; } }
 
 .interactive-footer {
   min-height: 97px;
