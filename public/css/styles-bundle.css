@@ -924,7 +924,9 @@ XIX. ADS
       width: 90%;
       margin: 0 auto 3.6rem; }
       #story-head h1 {
-        margin-top: 0; } }
+        margin-top: 0; }
+      #story-head h2 {
+        max-width: 750px; } }
   #story-head .short-wrap {
     max-width: 500px; }
 
