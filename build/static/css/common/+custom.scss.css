@@ -316,10 +316,18 @@
   .content-well .next-part a {
     color: #0185d3; }
 
-.shareComments {
+.shareCommentsTop {
   margin: 3.6rem 0 4.8rem 5% !important;
   max-width: 650px;
   padding: 0; }
+
+.shareComments {
+  margin: 3.6rem 0 4.8rem 10%;
+  padding: 0 0;
+  max-width: calc(750px - 10%); }
+  @media (max-width: 850px) {
+    .shareComments {
+      width: 85%; } }
 
 @media (max-width: 860px) {
   margin: 3.6rem 0 4.8rem 10%;
