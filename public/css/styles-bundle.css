@@ -924,7 +924,8 @@ XIX. ADS
       width: 90%;
       margin: 0 auto 3.6rem; }
       #story-head h1 {
-        margin-top: 0; }
+        margin-top: 0;
+        max-width: 80%; }
       #story-head h2 {
         max-width: 750px; } }
   #story-head .short-wrap {
@@ -1134,20 +1135,20 @@ XIX. ADS
 .no-well-rule {
   border-left: none; }
 
-.subscribe-cta {
+.subscribe-cta, .inline-refer {
   padding: 2.4rem 0;
   margin: 4.8rem 0 4.8rem 10%;
   border-top: 1px solid #d7d7d7;
   border-bottom: 1px solid #d7d7d7;
   max-width: calc(750px - 10%); }
-  .subscribe-cta h4 {
+  .subscribe-cta h4, .inline-refer h4 {
     font-weight: bold; }
-  .subscribe-cta p {
+  .subscribe-cta p, .inline-refer p {
     font-family: "Gotham A", "Gotham B", Arial, sans-serif;
     font-size: 1.6rem;
     line-height: 2.4rem;
     margin-bottom: 2.4rem; }
-  .subscribe-cta a {
+  .subscribe-cta a, .inline-refer a {
     background-color: #0185d3;
     font-family: "Gotham A", "Gotham B", Arial, sans-serif;
     color: white;
@@ -1159,13 +1160,13 @@ XIX. ADS
     -moz-transition: all 0.25s ease-out;
     -o-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out; }
-    .subscribe-cta a:visited {
+    .subscribe-cta a:visited, .inline-refer a:visited {
       color: white; }
-    .subscribe-cta a:hover {
+    .subscribe-cta a:hover, .inline-refer a:hover {
       background-color: #0175ba;
       text-decoration: none; }
 
-.subscribed .subscribe-cta {
+.subscribed .subscribe-cta, .subscribed .inline-refer {
   display: none; }
 
 .content-well .next-part {
@@ -1206,7 +1207,7 @@ XIX. ADS
     -webkit-print-color-adjust: exact; }
   body {
     padding-bottom: 0; }
-  .ad, .video-block, .quote-hang, footer, .more, .subscribe-cta, .next-part, .shareComments, #header-nav, #subscribe {
+  .ad, .video-block, .quote-hang, footer, .more, .subscribe-cta, .inline-refer, .next-part, .shareComments, #header-nav, #subscribe {
     display: none !important; }
   .content-well {
     border-left: none;
@@ -1302,6 +1303,20 @@ XIX. ADS
     max-width: none; }
     .credits p {
       display: inline; } }
+
+.inline-refer {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0; }
+  .inline-refer a {
+    padding: 0;
+    color: #0185d3;
+    background-color: initial; }
+    .inline-refer a:visited {
+      color: #0185d3; }
+    .inline-refer a:hover {
+      background-color: initial;
+      text-decoration: underline; }
 
 .interactive-footer {
   min-height: 97px;
