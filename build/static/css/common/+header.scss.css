@@ -10,7 +10,7 @@
   -moz-box-sizing: border-box; }
 
 .logo {
-  background-image: url("http://interactives.templates.statics.s3.amazonaws.com/v1.0/images/_dmn_logo.svg");
+  background-image: url("//interactives.dallasnews.com/common/templates/v1.0/images/_dmn_logo.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: left center;
@@ -137,7 +137,7 @@
     right: 0; }
   #header-account button {
     text-indent: -9999px;
-    background-image: url("http://interactives.templates.statics.s3.amazonaws.com/v1.0/images/identity.svg");
+    background-image: url("//interactives.dallasnews.com/common/templates/v1.0/images/identity.svg");
     background-repeat: no-repeat;
     background-size: 18px;
     background-position: left center;

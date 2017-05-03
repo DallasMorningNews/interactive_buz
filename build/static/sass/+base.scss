@@ -49,13 +49,14 @@ body {
   z-index: 0;
   position: relative;
   min-height: 100%;
+  height: auto !important;
   display: block;
-  padding-bottom: 200px;
+  padding-bottom: 200px !important;
   @media (max-width: 650px) {
-      padding-bottom: 225px;
+      padding-bottom: 225px !important;
   }
   @media (max-width: 450px) {
-      padding-bottom: 250px;
+      padding-bottom: 250px !important;
   }
 }
 ol, ul {

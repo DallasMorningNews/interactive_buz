@@ -45,14 +45,15 @@ body {
   z-index: 0;
   position: relative;
   min-height: 100%;
+  height: auto !important;
   display: block;
-  padding-bottom: 200px; }
+  padding-bottom: 200px !important; }
   @media (max-width: 650px) {
     body {
-      padding-bottom: 225px; } }
+      padding-bottom: 225px !important; } }
   @media (max-width: 450px) {
     body {
-      padding-bottom: 250px; } }
+      padding-bottom: 250px !important; } }
 
 ol, ul {
   list-style: none; }
@@ -1347,12 +1348,12 @@ XIX. ADS
     height: 30px;
     cursor: pointer; }
   .footer-social #footer-facebook, .footer-social #footer-twitter {
-    background: url("http://interactives.templates.statics.s3.amazonaws.com/v1.0/images/socialSprites.svg");
+    background: url("//interactives.dallasnews.com/common/templates/v1.0/images/socialSprites.svg");
     background-size: 120px 60px; }
   .footer-social #footer-twitter {
     background-position: 90px 0px; }
   .footer-social #footer-instagram, .footer-social #footer-youtube {
-    background: url("http://interactives.templates.statics.s3.amazonaws.com/v1.0/images/socialSprites2.svg");
+    background: url("//interactives.dallasnews.com/common/templates/v1.0/images/socialSprites2.svg");
     background-size: 60px 60px; }
   .footer-social #footer-youtube {
     background-position: 30px 0px; }
@@ -1460,7 +1461,7 @@ XIX. ADS
   -moz-box-sizing: border-box; }
 
 .logo {
-  background-image: url("http://interactives.templates.statics.s3.amazonaws.com/v1.0/images/_dmn_logo.svg");
+  background-image: url("//interactives.dallasnews.com/common/templates/v1.0/images/_dmn_logo.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: left center;
@@ -1587,7 +1588,7 @@ XIX. ADS
     right: 0; }
   #header-account button {
     text-indent: -9999px;
-    background-image: url("http://interactives.templates.statics.s3.amazonaws.com/v1.0/images/identity.svg");
+    background-image: url("//interactives.dallasnews.com/common/templates/v1.0/images/identity.svg");
     background-repeat: no-repeat;
     background-size: 18px;
     background-position: left center;

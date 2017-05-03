@@ -3,14 +3,11 @@
 $(document).ready(() => {
   // custom scripting goes here
 
-  console.log(document.cookie.indexOf('buz-audio'));
   if (document.cookie.indexOf('buz-audio') !== -1) {
     $('.fa-volume-up').removeClass('fa-volume-up').addClass('fa-volume-off');
   }
 
-
   const domain = document.domain;
-  console.log(domain);
 
   if (Modernizr.touchevents) {
     $('body').addClass('touch');
