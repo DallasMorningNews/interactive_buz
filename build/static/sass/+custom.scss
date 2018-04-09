@@ -563,7 +563,6 @@
 }
 
 .video-block {
-  width: 55%;
   font-size: 15px;
   img {
     max-width: 170px !important;
@@ -584,17 +583,12 @@
   height: 100%;
 }
 
-@media (max-width: 900px) {
-  .video-block {
-    width: 100%;
-  }
-}
 
-@media (max-width: 767px) {
-  .video-block {
-    margin: 2.4rem 0;
-  }
-}
+// @media (max-width: 767px) {
+//   .video-block {
+//     margin: 2.4rem auto;
+//   }
+// }
 
 @media (max-width: 681px) {
   .video-block {
